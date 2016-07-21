@@ -140,6 +140,21 @@ class Rational (n : Int, d : Int) {
   def +(n: Int): Rational = {
     new Rational(n * denom +  number ,  denom)
   }
+
+  def *(r: Rational): Rational = {
+    new Rational(r.number*number ,  denom * r.denom)
+  }
+  def *(n: Int): Rational = {
+    new Rational(n * number ,  denom)
+  }
+
+  def /(r: Rational): Rational = {
+    new Rational(number/r.number ,  denom / r.denom)
+  }
+  def /(n: Int): Rational = {
+    new Rational(number ,  denom*n)
+  }
+
   def this(n : Int) = this(n, 1)
 
   private def gcd(a: Int, b: Int) : Int = if (b == 0) a else gcd(b, a % b)
@@ -148,5 +163,5 @@ class Rational (n : Int, d : Int) {
 //
 
 object Rational {
-   def apply(n : Int, d : Int): Rational = new Rational(n, d)
+  def apply(n : Int, d : Int): Rational = new Rational(n, d)
 }

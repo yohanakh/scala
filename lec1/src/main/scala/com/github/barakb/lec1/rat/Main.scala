@@ -11,6 +11,10 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 //    println(Rational(2, 4) + 1)
+    println(Rational(2, 4) * 2 )
+    println(Rational(2, 4) * Rational(2,4) )
+    println(Rational(2, 4) / Rational(2,4) )
+    println(Rational(2, 4) / 2 )
     println(1 + Rational(2, 4))
 //    println(new Rational(2, 4) + new Rational(2, 3))
 //    println(new Rational(2, 4) + 1)
